@@ -21,11 +21,18 @@ export const useSocket = () => {
       if (socket) {
         socket.disconnect();
       }
-      socket = io("https://chat-backend-6r6t.onrender.com", {
+
+      socket = io("http://localhost:3000", {
         auth: {
           userId,
         },
       });
+
+      // socket = io("https://chat-backend-6r6t.onrender.com", {
+      //   auth: {
+      //     userId,
+      //   },
+      // });
 
       console.log("[SOCKET] Attempting to connect...");
     }

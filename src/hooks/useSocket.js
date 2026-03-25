@@ -21,7 +21,7 @@ export const useSocket = () => {
       if (socket) {
         socket.disconnect();
       }
-      socket = io("http://localhost:3000", {
+      socket = io("https://chat-backend-6r6t.onrender.com", {
         auth: {
           userId,
         },
